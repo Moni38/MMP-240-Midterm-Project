@@ -1,3 +1,116 @@
-body{
-font-family: "Times New Roman", serif;
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One');
+
+/* The html and body selectors below set the base font for the entire page */
+html {
+    font-size: .90rem;
+}
+
+body {
+    font-family: 'Gentium Book Basic', serif;
+    /* font-family: Lato, sans-serif; */
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+}
+
+@supports (grid-area: auto) {
+
+    .grid {
+        display: grid;
+        grid-template-columns: 10fr 25em;
+        grid-template-rows: 15em max-content 5em;
+        grid-template-areas:
+            "nav nav"
+            "article sidebar"
+            "footer footer";
+    }
+
+    nav {
+        grid-area: nav;
+
+    }
+
+    article {
+        grid-area: article;
+    }
+
+    side {
+        grid-area: side;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+}
+
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Yeseva One', cursive;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: red;
+}
+
+h3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: green;
+}
+
+nav {
+    background-color: green;
+}
+
+nav ul li {
+    color: white;
+    font-size: 15px;
+    display: inline;
+}
+
+header {
+    font-size: 50px;
+    color: white;
+}
+
+footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    font-size: .9rem;
+}
+
+main {
+    background-color: white;
+    padding: 1rem;
+}
+
+img {
+    width: 50%;
+    margin: 10px;
+    border: 2px solid red;
+}
+
+article {
+    margin: 10px;
+    background-color: beige;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+article ul li {
+    font-weight: 700;
+    margin-top: 5px;
 }

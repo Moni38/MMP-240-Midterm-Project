@@ -4,9 +4,12 @@ $color_3: green;
 $color_4: orange;
 $color_5: black;
 $color_6: white;
-$font_family_1: Lato, sans-serif;
-$font_family_2: 'Yeseva One', cursive;
-$font_family_3: 'Berkshire Swash', cursive;
+$font_family_1: Lato,
+sans-serif;
+$font_family_2: 'Yeseva One',
+cursive;
+$font_family_3: 'Berkshire Swash',
+cursive;
 $background_color_1: #009933;
 $background_color_2: #00cc66;
 $background_color_3: #99ffcc;
@@ -15,154 +18,183 @@ $background_color_4: white;
 @import "https://fonts.googleapis.com/css?family=Lato:400,700";
 @import "https://fonts.googleapis.com/css?family=Yeseva+One";
 @import "https://fonts.googleapis.com/css?family=Berkshire+Swash";
+
 /* unvisited link */
 /* visited link */
 /* mouse over link */
 html {
-	height: 100%;
-	font-size: .90rem;
+    height: 100%;
+    font-size: .90rem;
 }
+
 body {
-	height: 100%;
-	font-family: $font_family_1;
-	font-weight: 400;
-	line-height: 1.5;
-	color: $color_1;
+    height: 100%;
+    font-family: $font_family_1;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color_1;
 }
+
 #wrap {
-	.col {
-		float: left;
-		a {
-			text-decoration: none;
-		}
-	}
+    .col {
+        float: left;
+
+        a {
+            text-decoration: none;
+        }
+    }
 }
+
 @supports {
-	(grid-area: {
-		auto) {
-			.grid { display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			grid-template-rows: max-content max-content max-content;
-			grid-template-areas: "nav nav nav nav" "article article article aside" "footer footer footer footer";
-		}
-	}
+    (grid-area: (auto) {
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: max-content max-content max-content;
+            grid-template-areas: "nav nav nav nav""article article article aside""footer footer footer footer";
+        }
+    }
 }
+
 nav {
-	grid-area: nav;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	background-color: $background_color_1;
-	padding: 5px 0 5px 10px;
-	ul {
-		li {
-			font-size: 15px;
-			display: inline;
-			margin: 5px;
-		}
-	}
-	a {
-		text-decoration: none;
-	}
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $background_color_1;
+    padding: 5px 0 5px 10px;
+
+    ul {
+        li {
+            font-size: 15px;
+            display: inline;
+            margin: 5px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
+
 article {
-	grid-area: article;
-	background-color: $background_color_3;
-	padding: 10px;
-	ul {
-		li {
-			font-weight: 700;
-		}
-	}
+    grid-area: article;
+    background-color: $background_color_3;
+    padding: 10px;
+
+    ul {
+        li {
+            font-weight: 700;
+        }
+    }
 }
+
 aside {
-	grid-area: aside;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	padding: 10px;
-	ul {
-		list-style-type: none;
-	}
+    grid-area: aside;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+
+    ul {
+        list-style-type: none;
+    }
 }
+
 footer {
-	grid-area: footer;
-	color: $color_6;
-	background-color: $background_color_2;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-	font-size: .9rem;
-	li {
-		display: inline;
-	}
+    grid-area: footer;
+    color: $color_6;
+    background-color: $background_color_2;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+
+    li {
+        display: inline;
+    }
 }
+
 .img-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
-} {
-	h1 {
-		font-size: 2rem;
-		line-height: 1.5;
-		margin-top: 0;
-		margin-bottom: 0;
-		font-family: $font_family_2;
-	}
 }
+
+    {
+    h1 {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: $font_family_2;
+    }
+}
+
 h2 {
-	font-size: 1.75rem;
-	line-height: 1;
-	margin-top: 0;
-	margin-bottom: 0;
-	color: $color_2;
+    font-size: 1.75rem;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $color_2;
 }
+
 h3 {
-	font-size: 1.2rem;
-	line-height: 1.5;
-	margin-top: 0;
-	margin-bottom: 0;
-	color: $color_3;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $color_3;
 }
+
 a {
-	&:link {
-		color: $color_4;
-	}
-	&:visited {
-		color: $color_5;
-	}
-	&:hover {
-		color: $color_4;
-	}
+    &:link {
+        color: $color_4;
+    }
+
+    &:visited {
+        color: $color_5;
+    }
+
+    &:hover {
+        color: $color_4;
+    }
 }
+
 header {
-	font-family: $font_family_3;
-	font-size: 50px;
-	color: $color_6;
+    font-family: $font_family_3;
+    font-size: 50px;
+    color: $color_6;
 }
+
 img {
-	width: 50%;
-	margin: 10px;
-	border: 2px solid red;
+    width: 50%;
+    margin: 10px;
+    border: 2px solid red;
 }
+
 .box {
-	border: 1px solid red;
-	margin: 1em;
-	background-color: $background_color_4;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+    border: 1px solid red;
+    margin: 1em;
+    background-color: $background_color_4;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 .credit {
-	font-size: 10px;
+    font-size: 10px;
 }
+
 .aside-title {
-	font-weight: 700;
-	font-size: 17px;
+    font-weight: 700;
+    font-size: 17px;
 }
+
 .aside-address {
-	font-size: 15px;
-	color: $color_2;
+    font-size: 15px;
+    color: $color_2;
 }
+
 .aside-phone {
-	font-size: 12px;
+    font-size: 12px;
 }
